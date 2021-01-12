@@ -1,0 +1,29 @@
+package example1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LaunchBrowser {
+	
+
+	public static void main(String[] args) {
+     System.setProperty("webdriver.chrome.driver","C:\\Users\\sshaik53\\Downloads\\chromedriver_win32\\latest\\chromedriver.exe");
+     		WebDriver driver = new ChromeDriver();
+     		driver.get("https://www.flipkart.com");
+     		driver.manage().window().maximize();
+     		
+     		driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[2]/div/form/div[1]/input")).sendKeys("9742304390");
+     		driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[2]/div/form/div[2]/input")).sendKeys("Saikumar@123.");
+     		driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[2]/div/form/div[3]/button")).click();
+     		driver.findElement(By.className("LM6RPg")).sendKeys("dresses");
+     		driver.findElement(By.className("_2BhAHa")).click();
+     	
+     		
+     		
+     		driver.close();
+     	
+
+	}
+
+}
